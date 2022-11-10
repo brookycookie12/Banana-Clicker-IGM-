@@ -1,0 +1,206 @@
+Let's make a game!
+		name:Banana Clicker
+		by:Brooks
+		desc:This is a clicker game dedicated to Tristan <3
+		created:10/19/22
+		updated:10/27/22
+		version:0.1.1
+ 
+Settings
+		background:stuff/meadow.jpg
+		building cost increase:115%
+		building cost refund:50%
+		stylesheet:stuff/bigBlue.css
+ 
+Layout
+			use default
+ 
+Buttons
+			*monkeyButton
+				name:Banana Button
+				desc:Click this to get more banana.
+				icon:https://i.imgur.com/1SCTrqz.png
+				no text
+				class:bigButton hasFlares
+				on click:anim icon wobble
+				on click:yield 1 banana
+				icon class:shadowed
+				tooltip origin:bottom
+				tooltip class:red
+ 
+Resources
+		*banana|bananas
+				name:Banana|Bananas
+				desc:Your Monkeys will love these.
+				icon:https://i.imgur.com/1SCTrqz.png
+				class:noBackground
+				show earned
+ 
+ 
+Buildings
+		*TEMPLATE
+			on click:anim glow
+ 
+		*workermonkey|workermonkeys
+			name:Worker Monkey|Worker Monkeys
+			desc:Monkeys that pick bananas off of trees.
+			icon:https://i.imgur.com/kpBSOW6.png
+			cost:15 bananas
+			on tick:yield 0.2 bananas
+			unlocked
+			req:15 bananas:earned
+ 
+		*monkeycage|monkeycages
+			name:Monkey Cage|Monkey Cages
+			desc:A nice little cage.
+			icon:https://i.imgur.com/Ja4VaMp.png
+			cost:100 bananas
+			on tick:yield 1 banana
+			req:100 bananas:earned
+ 
+		*monkeytreehouse|monkeytreehouses
+			name:Monkey Treehouse|Monkey Treehouses
+			desc:A treehouse high in the sky for your monkeys.
+			cost:1100 bananas
+			on tick:yield 13 bananas
+			req:1100 bananas:earned
+ 
+		*monkeyhut|monkeyhuts
+			name:Monkey Hut|Monkey Huts
+			desc:Finally, a house for your monkeys to stay in.
+			cost:12000 bananas
+			on tick:yield 25 bananas
+			req:12000 bananas:earned
+ 
+		*bananapit|bananapits
+			name:Banana Pit|Banana Pits
+			desc:Places to keep your bananas.
+			cost:130000 bananas
+			on tick:yield 42 bananas
+			req:13000 bananas:earned
+ 
+		*monkeybandit|monkeybandits
+			name:Monkey Bandit|Monkey Bandits
+			desc:These monkeys go pillage other monkey villages.
+			cost:1400000 bananas
+			on tick:yield 250 bananas
+			req:1400000 bananas:earned
+ 
+		*monkeyinfantryunit|monkeyinfantryunit
+			name:Monkey Infantry Unit|Monkey Infantry Units
+			desc:These monkeys protect and attack.
+			cost:20000000	bananas
+			on tick:yield 1102 bananas	
+			req:20000000 bananas:earned
+ 
+		*minion|minions
+			name:Minion|Minions
+			desc:Strange yellow people that love bananas.
+			cost:330000000 bananas
+			on tick:yield 10901 bananas
+			req:330000000 bananas:earned
+ 
+		*evilminion|evilminions
+			name:Evil Minion|Evil Minions
+			desc:Minions, but they are purple and evil. They are very efficient at gathering bananas
+			cost:5100000000 bananas
+			on tick:yield 110400 bananas
+			req:5100000000 bananas:earned
+ 
+		*seedplanters|seedplanters
+			name:Seed Planter|Seed Planters
+			desc:People that plants more banana trees.
+			cost:75000000000 bananas
+			on tick:yield 1000000 bananas
+			req:75000000000 bananas:earned
+ 
+		*Gun|Guns
+			name:Gun|Guns
+			desc:Your monkeys finally invented guns.
+			cost:1000000000000 bananas
+			on tick:yield 5610970 bananas
+			req:1000000000000 bananas:earned
+ 
+		*Armory|Armories
+			name:Armory|Armories
+			desc:Your monkeys are getting so advanced!
+			cost:14000000000000 bananas
+			on tick:yield 80000000 bananas
+			req:140000000000000 bananas:earned
+ 
+		*Rocket|Rockets
+			name:Rocket|Rockets
+			desc:Your monkeys discovered how to go to space.
+			cost:170000000000000 bananas
+			on tick:yield 500000000 bananas
+			req:170000000000000 bananas:earned
+ 
+		*elmacho|elmachos
+			name:El Macho|El Machos
+			desc:You finally got this villan to work for you. He knows how to make even better rockets.
+			cost:2000000000000000
+			on tick:yield 800000040 bananas
+			req:2000000000000000
+ 
+ 
+		*vonneumannmachine|vonneumannmachines
+			name:von neumann machine
+			desc:These allow you to travel through different galaxies to farm more bananas
+			cost:5000000000000000
+			on tick:yield 1200000040 bananas
+			req:5000000000000000
+ 
+Upgrades
+	*TEMPLATE
+		on click:anim glow
+ 
+	//food upgrades
+	//inspiration : http://rabbit.org/suggested-vegetables-and-fruits-for-a-rabbit-diet/
+ 
+	*longbananas
+		name:Long Bananas
+		desc:These give your monkeys a larger calorie intake..<//><b>Effect:</b><.>+1 banana/click
+		cost:100 bananas
+		passive:increase banana yield of monkeyButton by 1
+		req:10 bananas:earned
+ 
+ 
+	*SturdyWood
+		name:Sturdy Wood
+		desc:This type of wood is more durable.<//><b>Effect:</b><.>+1 Banana/click
+		cost:200 bunnies
+		passive:increase banana yield of monkeyButton by 1
+		req:50 bananas:earned
+ 
+	*Figs
+		name:Figs
+		desc:These add variety to your monkeys diets.<//><b>Effect:</b><.>+1 banana/click
+		cost:400 bananas
+		passive:increase banana yield of monkeyButton by 1
+		req:200 bananas:earned
+ 
+	*Nuts
+		name:Nuts
+		desc:Just some nuts for your monkeys to eat.<//><b>Effect:</b><.>+1 bunny/click
+		cost:400 bunnies
+		passive:increase bunny yield of bunnyButton by 1
+		req:200 bunnies:earned
+ 
+	*apple
+		name:Apple
+		desc:Nice pieces of juicy red apples.<//><b>Effect:</b><.>bananas/click x1.5<.>banana production +5%
+		cost:10000 bananas
+		passive:multiply bunny yield of monkeyButton by 1.5
+		passive:multiply yield of bananas by 1.05
+		req:1000 bananas:earned
+ 
+	//building upgrades
+ 
+	*buildingUpgrade1
+		name:Leader
+		desc:Finally, someone to lead your monkeys!!<//><b>Effect:</b><.>worker monkey production x2<.>monkey cage production x2<.>monkey treehouse production x2
+		cost:1000 bunnies
+		passive:multiply yield of workermonkey by 2
+		passive:multiply yield of monkeycage by 2
+		passive:multiply yield of monkeytreehouse by 2
+		req:(workermonkey>=10 or monkeycage>=10 or monkeytreehouse>=10)
