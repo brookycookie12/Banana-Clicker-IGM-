@@ -1,0 +1,54 @@
+Upgrades
+	*TEMPLATE
+		on click:anim glow
+ 
+	//food upgrades
+	//inspiration : http://rabbit.org/suggested-vegetables-and-fruits-for-a-rabbit-diet/
+ 
+	*longbananas
+		name:Long Bananas
+		desc:These give your monkeys a larger calorie intake..<//><b>Effect:</b><.>+1 banana/click
+		cost:100 bananas
+		passive:increase banana yield of monkeyButton by 1
+		req:10 bananas:earned
+ 
+ 
+	*SturdyWood
+		name:Sturdy Wood
+		desc:This type of wood is more durable.<//><b>Effect:</b><.>+1 Banana/click
+		cost:200 bunnies
+		passive:increase banana yield of monkeyButton by 1
+		req:50 bananas:earned
+ 
+	*Figs
+		name:Figs
+		desc:These add variety to your monkeys diets.<//><b>Effect:</b><.>+1 banana/click
+		cost:400 bananas
+		passive:increase banana yield of monkeyButton by 1
+		req:200 bananas:earned
+ 
+	*Nuts
+		name:Nuts
+		desc:Just some nuts for your monkeys to eat.<//><b>Effect:</b><.>+1 bunny/click
+		cost:400 bunnies
+		passive:increase bunny yield of bunnyButton by 1
+		req:200 bunnies:earned
+ 
+	*apple
+		name:Apple
+		desc:Nice pieces of juicy red apples.<//><b>Effect:</b><.>bananas/click x1.5<.>banana production +5%
+		cost:10000 bananas
+		passive:multiply bunny yield of monkeyButton by 1.5
+		passive:multiply yield of bananas by 1.05
+		req:1000 bananas:earned
+ 
+	//building upgrades
+ 
+	*buildingUpgrade1
+		name:Leader
+		desc:Finally, someone to lead your monkeys!!<//><b>Effect:</b><.>worker monkey production x2<.>monkey cage production x2<.>monkey treehouse production x2
+		cost:1000 bunnies
+		passive:multiply yield of workermonkey by 2
+		passive:multiply yield of monkeycage by 2
+		passive:multiply yield of monkeytreehouse by 2
+		req:(workermonkey>=10 or monkeycage>=10 or monkeytreehouse>=10)
